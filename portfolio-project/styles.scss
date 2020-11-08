@@ -1,0 +1,300 @@
+@import "_variables.scss"; 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{  
+    color: $light;
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    font-family: 'Oswald', sans-serif; 
+}  
+img{ 
+    width: 100px;
+}
+#pageOne{ 
+    height: 100vh; 
+    width: 100%; 
+    background-color: $tertiary; 
+
+}                
+#contOne{ 
+    position: relative;
+    display: grid; 
+    grid-template-areas: 'name name surname' 'about projects contacts';  
+    grid-template-columns: 3fr 1fr 3fr; 
+    grid-template-rows: 2fr 1fr; 
+    justify-items: center; 
+    align-content: center;
+    background-color: $secondary; 
+    height: 80vh; 
+    margin: 20px; 
+}   
+.homepageLinks{ 
+    font-size: 1.5rem;
+}
+
+.scroll-image{ 
+    height: 70px;
+    position: absolute; 
+    bottom: 0px; 
+    right: 0px;
+}
+#myName{ 
+    grid-area: name; 
+    font-size: 7rem; 
+    margin: 0;
+} 
+#mySurname{ 
+    grid-area: surname; 
+    font-size: 7rem; 
+} 
+.namePart{ 
+    padding-top: 20vh; 
+
+}
+
+#aboutLink{ 
+    grid-area: about;
+
+} 
+#projectsLink{ 
+    grid-area: projects; 
+
+} 
+#contactsLink{ 
+    grid-area: contacts; 
+
+} 
+
+
+#pageTwo{ 
+    height: 100vh;  
+    display: flex; 
+    justify-content: center; 
+    background-color: $tertiary;
+
+} 
+
+#contTwo{ 
+    width: 80%;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;  
+    justify-content: space-evenly; 
+    align-content: space-between;
+    background-color: $secondary; 
+    height: 80vh; 
+    padding: 60px;
+} 
+
+.aboutText{ 
+    font-size: xx-large;
+} 
+i{ 
+    font-size: 3rem; 
+    color: $dark;
+}
+
+.img-comp{ 
+    display: flex; 
+    justify-content: space-evenly; 
+    background-color: $secondary;
+}
+
+
+#pageThree{ 
+    height:100vh; 
+    width: 100vw;
+    background-color: $secondary;
+
+} 
+h2{ 
+    font-size: 4rem;
+}
+
+#contThree{ 
+    position: relative;
+    height: 80vh;
+    background-color: $secondary; 
+    width: 80vw;
+} 
+#proj1{    
+   top: 120px;
+   left: 450px; 
+   width: 450px; 
+   
+} 
+#proj2{   
+    top: 120px;
+   left: 1400px; 
+   width: 450px;
+
+} 
+#proj3{  
+    top: 450px;
+   left: 450px; 
+   width: 450px;
+   
+} 
+#proj4{
+   top: 450px;
+   left: 1400px; 
+   width: 450px; 
+} 
+#proj5{   
+    top: 800px;
+    left: 920px; 
+    width: 450px; 
+}
+
+.textOverImage{ 
+    position: absolute;  
+   text-align: center;
+   background-color: $dark; 
+   padding: 0; 
+} 
+.textOverImage:hover .projectsImage{ 
+    opacity: 0;
+}
+.textOverImage:hover .imageText{ 
+    display: initial; 
+}
+
+.projectsImage{ 
+   width: 100%; 
+   transition: 0.4s;
+
+}
+
+.imageText{ 
+    background-color: $secondary;
+    font-size: large;
+    display: none;
+    position: absolute; 
+    top: 50%; 
+    bottom: 50%; 
+    right: 400px;
+} 
+
+#pageFour{ 
+   height: 100vh;  
+   display: flex; 
+   justify-content: center; 
+   background-color: $tertiary;
+} 
+#contFour{  
+   margin:20px;
+   width: 80%;
+   display: flex; 
+   flex-direction: column;  
+   justify-content: space-evenly; 
+   align-content: space-between;
+   background-color: $secondary; 
+   height: 80vh; 
+   padding: 50px;
+   text-align: center;
+} 
+
+#contactsHeader{ 
+    font-size: 4rem;
+
+}    
+
+a > i{ 
+    color: $dark; 
+    font-size: 4rem; 
+    &:hover{ 
+        color: $light; 
+        cursor: pointer; 
+    }  
+}
+
+@media screen and (max-width: 1500px){ 
+    #proj1{    
+        top: 120px;
+      //  left: 450px; 
+        left: 10vw;
+        width: 450px; 
+        
+     } 
+     #proj2{   
+         top: 120px;
+      //  left: 1400px; 
+        left: 50vw;
+        width: 450px;
+     
+     } 
+     #proj3{  
+       top: 450px;
+      //  left: 450px; 
+      left: 10vw;
+
+        width: 450px;
+        
+     } 
+     #proj4{
+        top: 450px;
+       // left: 1400px; 
+       left: 50vw;
+
+        width: 450px; 
+     } 
+     #proj5{   
+         top: 800px;
+        // left: 920px; 
+         left: 30vw;
+         width: 450px; 
+     }
+     
+} 
+
+@media screen and (max-width: 910px){ 
+    #proj1{    
+        top: 120px;
+      //  left: 450px; 
+        left: 10vw;
+        width: 300px; 
+        
+     } 
+     #proj2{   
+         top: 120px;
+      //  left: 1400px; 
+        left: 50vw;
+        width: 300px; 
+     
+     } 
+     #proj3{  
+       top: 450px;
+      //  left: 450px; 
+      left: 10vw;
+
+      width: 300px; 
+        
+     } 
+     #proj4{
+        top: 450px;
+       // left: 1400px; 
+       left: 50vw;
+
+       width: 300px; 
+    } 
+     #proj5{   
+         top: 800px;
+        // left: 920px; 
+         left: 30vw;
+         width: 300px; 
+     }
+     
+ .textOverImage:hover .imageText{ 
+     display: none; 
+
+ } 
+ .textOverImage:hover .projectsImage{ 
+    opacity: 1;
+}
+}
+
+@media screen and (max-width: 600px){ 
+    
+}
